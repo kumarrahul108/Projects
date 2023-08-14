@@ -1,0 +1,69 @@
+* 
+{
+    background : radial-gradient(circle,#0b456b,#021c37);
+}
+
+h1
+{
+    text-align: center;
+    color: red;
+}
+
+#clockConatiner
+{
+    /* background-color: red; */
+    position: relative;  /* to make needle responsive : size change hone par needle apne aap ko adjust kar le*/
+    /* border: 2px solid red; */
+    margin: auto;   /* to keep at center */ 
+    height: 40vw;
+    width: 40vw;
+    /* height: 440px;
+    width: 440px; */
+    background: url('clock.png') no-repeat; 
+    background-size: 100%;
+}
+/* apply position : relative -> in the begginning so that you have to set needle height & all only once */
+
+
+
+#hour , #minute , #second
+{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;  /* to rotate from bottom of the needle  */
+}
+
+ #hour
+{
+    width: 1%;
+    height: 22%;
+    top: 28%;
+    left: 49.25%;
+    background-color: red;
+    opacity: 0.8;
+    /* display: none;   to make hour needle invisible to set other neddle */
+}
+
+
+ #minute
+{
+    width: 1%;
+    height: 31%;
+    top: 19%;
+    left: 49.25%;
+    background-color: blue;
+    opacity: 0.8;  /*  the degree to which content behind an element is hidden, and is the opposite of transparency */
+    /* display: none;  */
+} 
+
+#second
+{
+    width: 1%;
+    height: 36%;
+    top: 14%;       
+    left: 49.27%;
+    background-color: green;
+    opacity: 0.8;
+    /* display: none;  */
+} 

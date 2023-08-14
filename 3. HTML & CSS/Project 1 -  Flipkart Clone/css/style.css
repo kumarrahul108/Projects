@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:ital,wght@0,500;0,600;1,500&family=Poppins:ital,wght@0,300;1,200&family=Rubik:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:ital,wght@0,500;0,600;1,500&family=Poppins:ital,wght@0,300;1,200&family=Rubik:wght@500&family=Ubuntu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+
+:root {
+    --main-bg-color: #2874f0;
+  }
+
+* 
+{
+    margin: 0;
+    padding: 0;
+} 
+
+header 
+{
+    background-color: var(--main-bg-color);
+    font-family: 'Lato', sans-serif;
+}
+
+nav   /* to use logo make navbar as flex */
+{
+    display: flex;
+}
+
+.logo 
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img 
+{
+    width: 88px;
+    padding: 0 25px;
+}
+
+nav ul 
+{
+    height: 58px;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li 
+{
+    list-style: none;
+    padding: 0 23px;
+}
+
+nav ul li a  
+{
+    color: white; 
+    text-decoration: none;
+}
+
+nav ul li a:hover
+{   
+    font-weight: bolder;  
+}
+
+.search
+{
+    display: flex;
+    align-items: center;
+}
+
+.search input 
+{
+    width: 30vw;
+    height: 27px;
+    border-radius: 4px;
+    margin: 0 16px 0 56px;
+    padding: 0 12px;
+}
+
+.search button 
+{
+    font-family: 'Lato', sans-serif;
+    /* font-weight: bold; */
+    font-weight: 900;
+}
+
+.slider 
+{
+    width: 80vw;
+    margin: 12px auto;
+    overflow: hidden;
+}
+
+.card 
+{
+    max-width: 91vw; 
+    margin: 37px auto;
+    /* margin: 12px 23vw; */
+    /* font-family: 'Ubuntu', sans-serif; */
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Merriweather', serif;
+    
+}
+
+.cards 
+{
+    display: flex; 
+    /* flex-direction: row;  */
+    overflow: hidden;
+}
+
+.card-item 
+{
+    display: inline-flex; 
+    justify-content: center;
+    flex-direction: column; 
+    margin: 0 15px;
+}
+
+.card h2 
+{
+    font-family: 'Lato', sans-serif;
+}
+
+.container
+{
+    min-height: cal(100vh - 58px - 12vh);
+}
+
+footer 
+{
+    height: 12vh;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+/* using Css variable mdn : type it on google then copy 
+:root {
+    -main-bg-color: brown;
+   }
+   in your css style sheet   
+   
+   using it we can change colour of whole of our website in one go */
+
+   

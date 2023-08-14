@@ -1,0 +1,105 @@
+
+<!-- intro from bootstrap -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <title>Project 1 : JavaScript Clock</title>
+
+    <style>
+        .conatiner
+        {
+            margin: 40px 60px;
+        }
+    </style>
+            <!-- a.getMonth() : strats from 0 : ==> 0 : January -->
+    <script>
+        let a;
+        let date;
+        let time; 
+        let min;
+        let sec;
+        const options = {weekday : 'long' , year : 'numeric' , month: 'long', day: 'numeric'}  
+        setInterval(() => 
+        {
+            a = new Date();   // created date
+            date = a.toLocaleDateString(undefined,options); // to get date 
+           
+            min = String(a.getMinutes()).padStart(2, '0');  // pad is uesd to convert it into double digits to look more attractive
+            sec = String(a.getSeconds()).padStart(2, '0');
+
+            time = a.getHours() + ":" + min + ":" + sec;   //created time string
+
+            document.getElementById('time').innerHTML = time  + " <br>on " + date; 
+        },1000);   // har seconds its updating : 1000 miliseconds 
+    </script>
+  </head>
+  <body>
+    
+
+    <!-- Navbar : templates from Bootstrap website  -->
+
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary style = "background-color: black"> -->
+      <!-- <nav class="navbar bg-primary" data-bs-theme="dark"> -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Date & Time</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pick any Country
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">USA</a></li>
+                  <li><a class="dropdown-item" href="#">Canada</a></li>
+                  <li><a class="dropdown-item" href="#">India</a></li>
+                  <li><a class="dropdown-item" href="#">Australia</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                </ul>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+    <!-- Create a Container --> 
+
+    <div class="conatiner my-4">   <!-- my-4 : margin of 4 in y axis-->
+
+        <!-- use jumbotron from bootstrap-->
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">   
+            <div class="container-fluid py-5">
+              <h1 class="display-5 fw-bold">Current Time is : <span id="time"></span></h1>
+              <p class="col-md-8 fs-4">We are here to show you the time for different countries.</p>
+              <button class="btn btn-primary btn-lg" type="button">Browse Time</button>
+            </div>
+          </div>
+    </div>  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
